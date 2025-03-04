@@ -44,6 +44,7 @@ int main(int argc, char **argv) {
 
         // Connect to server
         MPI_Comm_connect(port_name, MPI_INFO_NULL, 0, MPI_COMM_WORLD, &intercomm);
+	printf("Connected\n");
 
         // Send the array size and elements
         MPI_Send(&size, 1, MPI_INT, 0, 0, intercomm);
